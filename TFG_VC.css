@@ -1,0 +1,376 @@
+
+* {box-sizing: border-box}
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0px;
+  /* background-image:url("./imagenes/Logo.png") */
+}
+
+body { background-image: url(images/cielo_azul.jpg); background-size: cover }
+
+.tab {
+  position:fixed;
+  top: 33%;
+  float: left;
+  border: 1px solid rgb(236, 233, 233);
+  background-color: #f1f1f1;
+  width: 17%;
+  height: 0px;
+}
+
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding-top: 22px;
+  padding-right: 10%;
+  padding-bottom: 16px;
+  padding-left: 8%;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: rgb(236, 129, 183);
+}
+
+.tabcontent {
+  padding: 0px 12px;
+  text-align: center;
+  border: 0px solid rgb(197, 15, 15);
+  width: 100%;
+  border-left: none;
+  height: 100%;
+}
+
+h1 {
+  margin-left: 15%;
+  margin-top: 4%;
+  color:rgb(0, 0, 0);
+  font-size:225%;
+  font-family:"AvenirNext", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h2{
+  margin-left:15%;
+  color:rgb(0, 0, 0);
+  font-size:140%;
+  font-family:"AvenirNext", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+p{
+  text-align: justify;
+  color:rgb(0, 0, 0);
+  font-size:100%;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:normal;
+  margin-right: 5%;
+  margin-left:5%;
+}
+
+li{
+  text-align: justify;
+  color:rgb(0, 0, 0);
+  font-size:100%;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:normal;
+  margin-right: 5%;
+  margin-left:5%;
+}
+
+.accordion {
+  background-color: #ddd;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 18px;
+  margin-left: 18%;
+  width: 80%;
+  border: 1px solid rgb(200, 200, 200);
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.active, .accordion:hover {
+  background-color:rgb(236, 129, 183);
+}
+
+.accordion:after {
+  content: '\002B';
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  margin-left: 19%;
+  width:80%;
+  padding: 0 18px 0px 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel-scroll{
+  margin-left: 19%;
+  width:80%;
+  padding: 0 18px 0px 18px;
+  background-color: white;
+  max-height: 0;
+  overflow-y: scroll;
+  transition: max-height 0.2s ease-out;
+}
+
+html, body {
+	height: 100%;
+}
+
+#viewer {
+  width: 80.15%;
+  margin-left: 17.97%;
+  margin-top: 0%;
+  background-color: white;
+  height: 0px;
+  transition: height 0.4s;
+	border: 0px solid;
+  border-color: rgb(236, 129, 183);
+}
+
+.resultado{
+  margin-left: 0%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  color:rgb(0, 0, 0);
+  font-size:200%;
+  font-family:"AvenirNext", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.column {
+  float: left;
+  width: 48%;
+  padding: 10px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row{
+    margin-left: 5%;
+}
+
+.block{
+  padding:10px;
+}
+
+.column2{
+  float: left;
+  width: 18%;
+  padding: 10px;
+  height: 280px;
+  background-color: rgb(255, 255, 255);
+}
+
+#texto_column2{
+  margin-top: 40%;
+}
+
+.row2:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.button_label{
+  text-align: justify;
+  color:rgb(0, 0, 0);
+  font-size:100%;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:normal;
+  margin-left:20%;
+  margin:top 10px bottom 10px;
+  width:100%;
+  margin-top: 4.5%;
+  height: 12%;
+  padding-bottom: 20%;
+}
+
+.button_label1{
+  text-align: justify;
+  color:rgb(0, 0, 0);
+  font-size:100%;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:normal;
+  margin-left:20%;
+  margin:top 10px bottom 10px;
+  width:100%;
+  height: 12%;
+  padding-bottom: 15%;
+}
+
+.unidades{
+  float:left;
+  margin-top: 6.5%;
+  margin-left: 6px;
+
+}
+
+.column3{
+  float: left;
+  width: 82%;
+  padding: 10px;
+  height: 280px;
+  background-color: rgb(255, 255, 255);
+}
+
+.row3:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.meterdatos{
+  float:left;
+  width:75%;
+  margin-top: 4.5%;
+  background-color: white;
+  height: 12%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.btnAyA {
+  color: white;
+  padding: 14px 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #2196F3;
+  border: 2px solid black;
+  float:left;
+  width:46%;
+  margin-top: 10%;
+  margin-left:12%;
+  width:50%;
+  font-weight: bold;
+}
+
+.btnAyA:hover {background: #0b7dda;}
+
+.meterdatos_cargas{
+  width:7%;
+  margin-top: 0%;
+  background-color: white;
+  height: 12%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.meterdatos_cargas_nombre{
+  width: 11%;
+  margin-top: 0%;
+  background-color: white;
+  height: 12%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.botones_cargas{
+  color: white;
+  padding: 10px 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #2196F3;
+  border: 2px solid black;
+  width:10%;
+  width:20%;
+  font-weight: bold;
+}
+
+.botones_cargas:hover {background: #0b7dda;}
+
+
+/* ESTILO DE LAS IMÁGENES DE LA PESTAÑA "BIENVENIDA" */
+.foto1 {
+  width:34.5%;
+  height: 40%;
+  text-align: center;
+
+  transition: 0.5s;
+  object-fit: cover;
+
+  filter: saturate(140%);
+}
+.foto2 {
+  width:50%;
+  height: 55%;
+  text-align: center;
+
+  transition: 0.5s;
+  object-fit: cover;
+
+  filter: saturate(140%);
+}
+.logo{
+  position:fixed;
+  top: 0%;
+  float: left;
+  width:16.9%;
+  height: 33%;
+}
+.foto_prisma, .foto_ver_dron, .fotos_botones, .fotos_error, .fotos_ejes {
+  width:60%;
+  height: 60%;
+  text-align: center;
+
+  transition: 0.5s;
+  object-fit: cover;
+
+  filter: saturate(140%);
+  image-rendering: crisp-edges;
+}
+.fotos_ejes{
+  width:310px;
+  height: 230px;
+  text-align: center;
+
+  transition: 0.5s;
+  object-fit: cover;
+
+  filter: saturate(140%);
+  image-rendering: crisp-edges;
+}
+.foto1:hover, .foto_prisma:hover, .fotos_botones:hover, .fotos_error:hover, .foto_ver_dron:hover, .fotos_ejes:hover{
+  transform: scale(1.08);
+}
+.foto2:hover{
+  transform: scale(1.1);
+}
+
+
+/* QUITAMOS LAS FLECHITAS DEL INPUT NUMÉRICO (SE PUEDE SEGUIR HACIENDO SCROLL CON EL MOUSE) */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+   -webkit-appearance: none; 
+   margin: 0; 
+}
+input[type=number] { -moz-appearance:textfield; }
+

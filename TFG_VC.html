@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lan="es">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/ffb7a77e4b.js" crossorigin="anonymous"></script>
+
+  <link rel="icon" href = "images/Logo.png" type = "image/x-icon" >
+
+  <title>Personaliza tu dron con V&C Drone</title>
+
+  <link rel="stylesheet" type="text/css" href="TFG_VC.css">
+
+</head>
+
+<body>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src= "TFG_VC.js"></script>
+  <script type="module" src= "indexAnimaciones.js" async="async"></script>
+
+
+  <img class="logo" src="images/Logo.png">
+
+  <div class="tab">
+      <button class="tablinks" onclick="opensection(event, 'Bienvenida')" id="defaultOpen"> 
+        <i class="fa-solid fa-house-chimney"></i>&nbsp;&nbsp;Bienvenida
+      </button>
+      <button class="tablinks" onclick="opensection(event, 'Parametros')">
+        <i class="fa-solid fa-file-pen"></i>&nbsp;&nbsp;Parámetros de <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entrada
+      </button>
+      <button class="tablinks" onclick="opensection(event, 'Modelo')">
+        <i class="fa-solid fa-plane"></i>&nbsp;&nbsp;Visualice su <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; modelo
+      </button>
+      <button class="tablinks" onclick="opensection(event, 'Resultados')">
+        <i class="fa-solid fa-list-check"></i>&nbsp;&nbsp;Resultados finales <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        y recomendaciones
+      </button>
+  </div>
+
+  <div id="Bienvenida" class="tabcontent">
+
+      <h1>"VOLAR SE HACE EN GRAN MEDIDA <br> CON LA IMAGINACIÓN" </h1>
+      <h2><i>¡Descubre tus posibilidades!</i></h2>
+      <br>
+
+
+      <button class="accordion default-open" onclick="openacordeon()"><b>1/3 - ¿Qué es V&C Drone?</b></button>
+      <div class="panel">
+          <p>
+            Bienvenido/a a <b>V&C Drone</b>. Le presentamos la tecnología que puede ayudarle a descubrir las posibilidades 
+            de vuelo de su dron. Tendrá la oportunidad de seleccionar y distribuir en su dron la carga de pago que desee 
+            con el fin de asegurar la viabilidad del cumplimiento de la misión de vuelo propuesta. ¡Esperamos que este 
+            análisis prevuelo le sea de utilidad!
+          </p>
+          <!-- <video width="560" height="315" controls autoplay frameborder="0" allow="accelerometer; clipboard-write; 
+          encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            <source src="Nuestro_TFG.mp4" type="video/mp4">
+          </video> -->
+          <iframe width="560" height="315" style="text-align: center" src="https://www.youtube.com/embed/EPi0zxSw0sw?autoplay=1" 
+          title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br><br><br>
+      </div>
+
+
+      <button class="accordion" onclick="openacordeon()"><b>2/3 - ¿Cómo funciona V&C Drone?</b></button>
+      <div class="panel">
+        <p>
+          A continuación, detallaremos sección a sección cuál es el procedimiento a seguir para sacarle el máximo partido 
+          a V&C Drone. Aclararemos paso por paso cada una de las dudas que le pudieran susrgir en cualquiera de las partes 
+          de esta página web.
+        </p>
+        <ul>
+          <li>
+            En esta primera sección de <b>“Bienvenida”</b> encontrará un vídeo introductorio del proyecto V&C Drone, 
+            entenderá como gestionar correctamente esta potente herramienta para sus vuelos y conocerá de primera mano 
+            a los creadores de este sitio web.
+          </li>
+          <li>
+            En la siguiente sección, <b>“Parámetros de entrada”</b> deberá introducir los datos de sus cargas de pago con 
+            el fin de nosotros poder mostrar la disposición de su modelo cargado, darle datos sobre el centro de gravedad
+            calculado y, por último, darle algunas sugerencias para mejorar su vuelo.
+          </li>
+          <p>En la pestaña <b>“Defina las cargas de pago”</b> dispondrá de tres botones:</p>
+          <ul>
+            <li>
+              <b>Añadir carga.</b> Deberá pulsar este botón tantas veces como cargas quiera introducir en el dron. 
+              Por ejemplo, si desea introducir 3 cargas, la imagen resultante será la siguiente:
+            </li>
+            <br><img class="fotos_botones" src="images/3_cargas.png"><br>
+            <li>
+              <b>Eliminar la última carga.</b> Si usted desea eliminar la última fila creada, no tendrá más que 
+              pulsar este botón. Si eliminamos la última fila del ejemplo anterior, se obtiene:
+            </li>
+            <br><img class="fotos_botones" src="images/2_cargas.png"><br>
+            <li>
+              <b>Guardar y cargar datos.</b> Una vez elegida la cantidad de cargas que desee meter en el dron, deberá 
+              completar todos los campos de cada carga. En caso de no hacerlo o de introducir algún dato erróneo, saltará 
+              un mensaje de error al pulsar este botón. Si usted ha completado todos los campos correctamente, entonces 
+              se enviarán al servidor los datos de las cargas introducidas en ese momento.
+            </li>
+            <img class="fotos_error" src="images/campo_por_completar.png">
+          </ul>
+          <p>
+            <b>ATENCIÓN:</b> si pulsa el botón "Guardar y cargar datos" con “cero cargas” usted estará decidiendo 
+            hacer una visualización del dron vacío sin cargar.
+          </p>
+          <img class="fotos_error" src="images/aviso_0_cargas.png"><br>
+          <p>
+            Cada una de las cargas definidas será modelada como un prisma rectangular. Los datos que debe introducir 
+            por cada una de las cargas son los siguientes:
+          </p>
+          <ul>
+            <li><b>Nombre:</b> ponga el nombre que desee a la carga, sin ninguna restricción.</li>
+            <li>
+              <b>(X, Y, Z):</b> son las coordenadas de una esquina del prisma rectangular. Se deben introducir las 
+              medidas en centímetros (cm).
+            </li>
+            <li>
+              <b>(A, B, H):</b> son las medidas de los lados del prisma, siendo H la altura según la dirección "z", A el lado de la base según
+              la dirección "x" y B el lado de la base según la dirección "y". 
+              Se deben introducir las medidas en centímetros (cm).
+            </li>
+            <li><b>Masa:</b> introduzca la masa en kilogramos (kg) de cada una de las cargas que usted desee definir.</li>
+          </ul>
+          <img class="foto_prisma" src="images/imagen_prisma.png"><br>
+          <img class="fotos_ejes" src="images/imagen_ejes_dron.png"><img class="fotos_ejes" src="images/imagen_ejes_dron_2.png">
+          <p>
+            Una vez recibida la notificación de éxito de envío de datos, usted deberá dirigirse a la sección <b>“Visualice 
+            su dron”</b>, donde, pulsando la pestaña “Visualice su dron” y después el botón “Visualizar dron”, podrá ver 
+            el modelo 3D del dron con las cargas que haya definido en la escena también.
+          </p>
+          <img class="foto_ver_dron" src="images/ver_dron.png">
+          <p>
+            También en la pestaña <b>“Calcule el alcance y la autonomía”</b> de la sección “Parámetros de entrada” 
+            tendrá que rellenar un total de 9 casillas para que nosotros podamos calcular el alcance y la autonomía de su 
+            dron. Estos 9 datos dependerán de la fase de vuelo del VTOL, y son los siguientes:
+          </p>
+          <br><img class="foto_ver_dron" src="images/resultados_todo.png">
+          <ul>
+            <li><b>N<sub>mot</sub>:</b> número de motores utilizados. <b>(Ej.: 4 motores)</b></li>
+            <li><b>I<sub>mot</sub>:</b> corriente máxima en amperios (A) que consume un solo motor. <b>(Ej.: 10A)</b></li>
+            <li><b>I<sub>equip</sub>:</b>corriente máxima en amperios (A) que consumen los equipos del dron, excluyendo sus motores. 
+              <b>(Ej.: 2A)</b></li>
+            <li><b>V<sub>bat</sub>:</b> tensión nominal en voltios (V) de la batería. <b>(Ej.: 7,4V)</b></li>
+            <li><b>V<sub>0</sub>:</b> velocidad de vuelo (km/h) del dron; aplicable a la fase de crucero. <b>(Ej.: 70km/h)</b></li>
+            <li><b>Q:</b> capacidad de la batería en mA·h. <b>(Ej.: 50000mA·h)</b></li>
+            <li><b>C<sub>rate</sub>:</b> tasa C de la batería, definida como la tasa máxima a la que puede descargarse una 
+              batería en relación con su capacidad sin que se dañe o sobrecaliente; la tasa C se mide en h<sup>-1</sup>. 
+              <b>(Ej.: 10h<sup>-1</sup>)</b></li>
+            <li><b>DR:</b> regla de descarga de la batería. Se trata del máximo porcentaje de carga recomendable para la batería. 
+              <b>(Ej.: 80%)</b></li>
+            <li><b>L<sub>flying</sub>:</b> carga de pago en tanto por ciento; se divide el peso de la carga de pago entre el peso total 
+              del vuelo (peso del dron más peso de la carga de pago) y se multiplica por 100. <b>(Ej.: 30%)</b></li>
+          </ul>
+          <p>Cuando haya introducido todos los datos solicitados, pulse el botón “Guardar y Calcular”.</p>
+          <li>
+            Finalmente, en la última sección <b>“Resultados finales y recomendaciones”</b>, en la pestaña “Clique aquí para 
+            ver sus resultados” podrá ver cuáles han sido los resultados obtenidos según sus datos introducidos.
+          </li>
+        </ul>
+        <br>
+      </div>
+
+
+      <button class="accordion" onclick="openacordeon()"><b>3/3 - Sobre nosotros</b></button>
+      <div class="panel">
+          <p>
+            <b>V&C Drone</b> nació en febrero de 2022 en la Universidad de Politécnica de Madrid como Proyecto de Fin de 
+            Grado de la mano de Virginia Bueno y César Jiménez, tutorizados por Sergio Ávila y Luis Izquierdo.
+          </p>
+          <p>
+            El motivo de su nacimiento fue la necesidad de poder realizar cálculos preliminares sobre el vuelo del dron 
+            Fighter VTOL Fix-wing Aircraft.
+          </p>
+          <p>
+            <b>Virginia Bueno</b> es la creadora del software que se esconde detrás de esta página web. Una persona muy 
+            comprometida con su trabajo, persistente y organizada gracias a la cual ha sido posible obtener todos los 
+            resultados preliminares de vuelo que podrá visualizar en V&C Drone. ¡Virginia espera que su vuelo cumpla con 
+            las expectativas que le proporcionamos!
+          </p>
+          <img class="foto1" src="images/Virgi.jpg">
+          <br>
+          <p>
+            <b>César Jiménez</b> es el creador de la página web que está leyendo ahora mismo. Su gusto por los desafíos, 
+            persistencia en el trabajo y creatividad han hecho de esta página web algo sencillo de entender y utilizar. 
+            ¡César espera que su visita a este sitio web sea lo más cómoda y satisfactoria posible!
+          </p>
+          <img class="foto1" src="images/Cesar.jpg">
+          <br>
+          <p>¡<b>Juntos</b> forman un gran equipo de trabajo!</p>
+          <p>
+            Madrugar por las mañanas, acostarse tarde por las noches, una entrega completa a este trabajo…todos los 
+            sacrificios, al final, ¡siempre merecen la pena! ¡Ambos están encantados de haber desarrollado un entorno que 
+            le pueda ser de utilidad en su misión de vuelo!
+          </p>
+          <img class="foto2" src="images/Juntos.jpeg">
+          <p>¡Le deseamos un buen vuelo! &#128516; &#128747;</p>
+          <br>
+      </div>
+
+  <br><br><br><br><br>
+        
+  </div>
+
+  <div id="Parametros" class="tabcontent">
+
+      <h1>"VOLAR SE HACE EN GRAN MEDIDA <br> CON LA IMAGINACIÓN" </h1>
+      <h2><i>¡Descubre tus posibilidades!</i></h2>
+      <br>
+
+
+      <button class="accordion" id ="acordeon" onclick="openacordeon_scroll()"><b>1/2 - Defina las cargas de pago</b></button>
+      <div class="panel-scroll" id="acordeon div">
+          <p>
+            Con el objetivo de calcular el <b>centro de gravedad</b> de su dron, necesitaremos que introduzca los datos 
+            de las cargas de pago  que desee añadir. Se piden la posición (X, Y, Z), las dimensiones (A, B, H) y la masa 
+            de cada carga.
+          </p>
+   
+          <div class="botones">
+
+            <br>
+            <input type="button" class="botones_cargas" id="add" value="Añadir carga">  </input>
+            <input type="button" class="botones_cargas" id="delete" value="Eliminar la última carga">
+            <input id="calculando" type="button" class="botones_cargas" onclick="meteCargaPago()" value="Guardar y cargar datos">  </input>
+            <br>
+          </div>
+          <p>
+            Cualquier aclaración que pueda necesitar en este apartado, se encuentra en la <b>sección "Bienvenida", en 
+            "¿Cómo funciona V&C Drone?"</b>.
+          </p>
+          <br><br>
+
+      </div>
+
+      <button class="accordion" onclick="openacordeon()"><b>2/2 - Calcule el alcance y la autonomia</b></button>
+      <div class="panel">
+          <p>
+            Con el objetivo de calcular el <b>alcance</b> y la <b>autonomía</b> de su dron, necesitaremos que 
+            introduzca los siguientes datos:
+          </p>
+          <div class="row">
+            <div class="column" style="background-color:rgb(255,255,255);">
+              <div class="row2">
+                <div class="column2" style="background-color:rgb(255,255,255);">
+                  <div id="texto_column2">
+                    <p class="button_label1"><b>N<sub>mot</sub>:</b></p>
+                    <p class="button_label1"><b>I<sub>mot</sub>:</b></p>
+                    <p class="button_label1"><b>I<sub>equip</sub>:</b></p>
+                    <p class="button_label1"><b>V<sub>bat</sub>:</b></p>
+                    <p class="button_label1"><b>V<sub>0</sub>:</b></p>
+                  </div>
+                </div>
+                <div class="column3" style="background-color:rgb(255,255,255);">
+                    <input type="number" class="meterdatos" id="Numero_motores" placeholder="Número de motores" min="0" step="1"/><br>
+                    <input type="number" class="meterdatos" id="Corriente_max_1motor" placeholder="Corriente máxima por motor"/>
+                    <b class="unidades">A</b><br>
+                    <input type="number" class="meterdatos" id="Corriente_max_equipos" placeholder="Corriente máxima otros equipos" />
+                    <b class="unidades">A</b><br>
+                    <input type="number" class="meterdatos" id="Tension_nominal_bateria" placeholder="Tensión nominal de la batería" />
+                    <b class="unidades">V</b><br>
+                    <input type="number" class="meterdatos" id="Velocidad_vuelo" placeholder="Velocidad de vuelo" />
+                    <br><b class="unidades">km/h</b><br>
+                </div>
+              </div>
+            </div>
+            <div class="column" style="background-color:rgb(255,255,255);">
+              <div class="row2">
+                <div class="column2" style="background-color:rgb(255,255,255);">
+                  <div id="texto_column2">
+                    <p class="button_label"><b>Q:</b></p>
+                    <p class="button_label"><b>C<sub>rate</sub>:</b></p>
+                    <p class="button_label"><b>DR:</b></p>
+                    <p class="button_label"><b>L<sub>flying</sub>:</b></p>
+                  </div>
+                </div>
+                <div class="column3" style="background-color:rgb(255,255,255);">
+                    <input type="number" class="meterdatos" id="Capacidad_bateria" placeholder="Capacidad de la batería" />
+                    <b class="unidades">mA·h</b><br>
+                    <input type="number" class="meterdatos" id="Tasa_C_bateria" placeholder="Tasa C de la batería" />
+                    <b class="unidades">h<sup>-1</sup></b><br>
+                    <input type="number" class="meterdatos" id="Regla_descarga_bateria" placeholder="Regla de descarga de la batería" />
+                    <b class="unidades">%</b><br>
+                    <input type="number" class="meterdatos" id="Carga_vuelo" placeholder="Carga de vuelo" />
+                    <b class="unidades">%</b><br>
+                    <input type="button" class="btnAyA" value="Guardar y Calcular" onclick="CalcularAyA()"></input>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            Cualquier aclaración que pueda necesitar en este apartado, se encuentra en la <b>sección "Bienvenida", en 
+              "¿Cómo funciona V&C Drone?"</b>.
+          </p>
+          <br><br>
+          
+      </div>
+
+      <br><br><br><br><br>
+
+  </div>
+
+  <div id="Modelo" class="tabcontent">
+
+    <h1>"VOLAR SE HACE EN GRAN MEDIDA <br> CON LA IMAGINACIÓN" </h1>
+    <h2><i>¡Descubre tus posibilidades!</i></h2>
+    <br>
+    <button class="accordion" onclick="openacordeon()"><b>1/1 - Visualice su dron</b></button>
+    
+    <div class="panel">
+      <p>
+        ¡Bienvenido a la primera pestaña de resultados! Si usted ya ha incluido los datos de sus cargas de pago en la 
+        pestaña de "Parámetros de entrada", pulse el siguiente botón para visualizar su dron cargado:
+      </p>
+      <input id="calculando_" type="button" class="botones_cargas" onclick="divLogin()" value="Visualizar dron">  </input>
+      <br><br><br>
+    </div>
+
+    <iframe id="viewer" name="viewer" allow="fullscreen" allow="xr-spatial-tracking" src="./indexAnimaciones.html" style="display: unset;" 
+    scrolling="no"></iframe>
+
+    <br><br><br><br><br>
+    
+  </div>
+
+  <div id="Resultados" class="tabcontent">
+    <h1>"VOLAR SE HACE EN GRAN MEDIDA <br> CON LA IMAGINACIÓN" </h1>
+    <h2><i>¡Descubre tus posibilidades!</i></h2>
+    <br>
+
+    <button class="accordion" onclick="openacordeon()"><b>1/1 - Clique aquí para ver sus resultados</b></button>
+    <div class="panel">
+      
+      <br>
+      <ul>
+        <li id="numero_cargas">
+          La <b>cantidad de cargas</b> introducidas es de - cargas. Los resultados obtenidos con esta distribución de 
+          carga son los siguientes.
+        </li>
+        <br>
+        <li>Aproximadamente, la <b>autonomía</b> de su vuelo será de: </li>
+        <h1 id="horas" class="resultado">- h</h1>
+        <li>Aproximadamente, el <b>alcance</b> de su vuelo será de: </li>
+        <h1 id="kilometros" class="resultado">- km</h1>
+        <li>Las coordenadas (x, y, z) del centro de gravedad <b>original</b>, del dron sin cargas, son: </li>
+        <h1 id="cdg_original" class="resultado">(-, -, -) cm</h1>
+        <li>
+          Las coordenadas (x, y, z) del centro de gravedad del dron <b>cargado</b> con las cargas de pago seleccionadas 
+          son: 
+        </li>
+        <h1 id="cdg_cargado" class="resultado">(-, -, -) cm</h1>
+        <li>
+          Con el motivo de hacer que su vuelo sea el mejor posible, las <b>sugerencias</b> que desde V&C Drone le 
+          queremos hacer son las siguientes: 
+        </li>
+        <br>
+        <p id="sugerencias"><b>"De momento no hay sugerencias."</b></p>
+      </ul>
+
+      <br><br>
+    </div>
+
+    <br><br><br><br>
+  
+  </div>
+
+
+  <script>
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+
+      // const iframe_dron = document.getElementById("viewer");
+      // iframe_dron.contentWindow.location.reload();
+
+      // window.stop();
+  </script>
+   
+</body>
+
+</html>
